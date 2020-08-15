@@ -1,0 +1,58 @@
+<html>
+<head>
+<style type="text/css">
+#conteudo{ display:none; }
+.center{
+ position:absolute;
+ top: 50%;
+ left: 50%;
+ margin-left: -75px; /*centralizando a imagem*/
+ margin-top: -35px; /*centralizando a imagem*/
+}
+
+minhaImagem{
+	width= 150px;
+	height= 150px;
+}
+
+</style>
+</head>
+<body>
+<div id="carregando" class="center">
+   <img src="/static/MtsApp/img/Figura1.jpg" width="250" height="250" />
+   <img src="" id="minhaImagem" width="250" height="250">
+   <!--<img src="/static/MtsApp/img/Figura1.jpg" width="250" height="250" />-->
+</div>
+<div id="QualImagem">QualImagem</div>
+<div id="PegueiDoModel"> Peguei isso do Model:</div>
+<div id="Outroconteudo">
+
+<form  method="post">  {% csrf_token %}
+   <div id="BotaoDeFora">
+      <input type="submit" value="BlocoJs" name="BotaoDeFora">
+   </div>
+</form>
+
+<p>Isso aqui é outro conteúdo.</p>
+</div>
+
+
+<script>
+
+  var Fig_a = "/static/MtsApp/img/A3.jpg"
+  var Fig_b = "/static/MtsApp/img/B3.jpg"
+  var Fib_c = "/static/MtsApp/img/C3.jpg"
+   document.getElementById("minhaImagem").src = [Fib_c]
+
+  window.onload = function(){
+	document.getElementById('Outroconteudo');
+	document.getElementById('Outroconteudo');
+    QualImagem.innerHTML = `Peguei a figura ${Fib_c}`;
+
+    var DoModel = '{{ objeto_tentativa_js|escapejs }}';
+    PegueiDoModel.innerHTML = 'Peguei isso do Model ${DoModel}';
+  }
+</script>
+
+</body>
+</html>

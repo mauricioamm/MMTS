@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+
+
+<body>
+   <form action="{% url 'url_janelas' %}" method="post">  {% csrf_token %}
+            <!-- Abre imagem, mas não não há resposta -->
+            <!-- Se eu coloco: action="{% url 'url_listagem' %}", aí funciona-->
+            <input type="image" src="/static/MtsApp/img/Figura1.jpg" width="200" height="200" name="Embora">
+            <br><br>
+            <!-- Abre um botão comum (que responde), mas não abre imagem -->
+            <input type="submit" src="/static/MtsApp/img/Figura1.jpg" name="Embora">
+   </form>
+</body>
+</html>

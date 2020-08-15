@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+
+<head>
+	<meta charset= "utf-8">
+	<link rel="icon" href="imagens/Figurapng.png">
+	<link rel="Stylesheet" href="css/Aula 08- Imagens - Parte 3.css">
+	<title>HTML5 e CSS3</title>
+	<style>
+	*{
+  margin: 0px;
+  padding: 0px;
+ }
+
+p{
+  font-family: Arial; 
+}
+
+.container{
+    width: 70%;
+    height: auto;
+    margin: auto; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	grid-template-rows: 80px 200px;
+    
+}
+
+.central {
+
+}
+
+figure{
+  width: 30%;
+  height: auto;
+  border: 2px solid #ccc;
+  padding: 10px; 
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+figcentral {
+  width: 100%;
+  height: 300px;
+}
+
+}
+
+ 
+/*    display: flex serve para...colocar as figuras lado a lado? */		
+	
+	</style>
+</head>
+
+
+
+<body>
+	<div class="container">
+		
+		<figure>
+			<img src="Figura1.jpg" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" width="300">
+		</figure>
+
+		<figure>
+			<img class= "figcentral" src="Figura1.jpg" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" width="300">
+		</figure>
+	
+		<figure>
+			<img src="Figura1.jpg" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" width="300">
+		</figure>
+		
+		<figure>
+			<img src="Figura1.jpg" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" width="300">
+		</figure>
+
+		<figure>
+			<img src="Figura1.jpg" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" width="300">
+		</figure>
+
+
+		
+	</div>
+	
+</body>
+
+</html>

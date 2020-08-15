@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<form method="post">
+	    {% csrf_token %}
+        <h2>Fim do Bloco</h2> {{xbloco}}<br>
+        <p>Atingiu o critério:</p>{{xcriterio}}
+        <br>
+        <input type="submit" value="Ir para próximo bloco" name="proximo">
+        <br>
+        <input type="submit" value="Voltar ao início" name="voltar">
+    </form>
+<div id="AcertouSom">
+                <!-- um opção: <audio controls autoplay> -->
+				<audio autoplay>
+					<source src="/static/MtsApp/sons/errou2.wav" type="audio/mpeg">
+				</audio>
+</div>
+</body>
+</html>

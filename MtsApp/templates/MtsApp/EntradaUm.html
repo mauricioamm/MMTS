@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<form method="post">
+	    {% csrf_token %}
+        <h2>Entrada provisória</h2>
+        <br>
+        <input type="submit" value="Rodar o Bloco" name="rodar_bloco">
+        <br>
+        <input type="submit" value="BlocoJs" name="rodar_blocoJS"> <br>
+        <input type="submit" value="Resetar bloco saída" name="ResetSaida">
+    </form>
+</body>
+</html>

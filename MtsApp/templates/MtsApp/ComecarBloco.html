@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-columns: 190px 190px 190px; 
+  grid-template-rows: 190px 190px 190px;
+  grid-gap: 10px;
+  justify-content: center;
+  background-color: gray;
+  padding: 10px;
+  margin-right: 0px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 0px 0;
+  font-size: 30px;
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+}
+
+figure{
+  width: auto;
+  height: auto;
+  padding: 0px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+
+</style>
+</head>
+
+
+<body>
+
+<div class="grid-container">
+
+  <div>
+        <form method="post">  {% csrf_token %}
+          <input type="image" src="/static/MtsApp/img/vazio.jpg" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form method="post">  {% csrf_token %}
+          <input type="image" src="/static/MtsApp/img/vazio.jpg" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form action="{% url 'url_CarregarComparacoes' numero %}" method="post">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.Modelo}}" width="195" height="195" >
+        </form>
+  </div>  
+  <div></div>
+  <div>
+        <form method="post">  {% csrf_token %}
+          <input type="image" src="/static/MtsApp/img/vazio.jpg" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form method="post">  {% csrf_token %}
+          <input type="image" src="/static/MtsApp/img/vazio.jpg" width="195" height="195" name="Embora">
+        </form>
+  </div>
+</div>
+
+
+</body>
+</html>

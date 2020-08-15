@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-columns: 190px 190px 190px; 
+  grid-template-rows: 190px 190px 190px;
+  grid-gap: 10px;
+  justify-content: center;
+  background-color: gray;
+  padding: 10px;
+  margin-right: 0px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 0px 0;
+  font-size: 30px;
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+}
+
+figure{
+  width: auto;
+  height: auto;
+  padding: 0px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+
+</style>
+</head>
+
+
+<body>
+  <form method="post">
+  {% csrf_token %}
+<div class="grid-container">
+
+  <div>
+    	<figure>
+			<img src="{{objeto_janela.SupEsq}}" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" height= "195" width="195">
+		</figure>
+  </div>
+  <div></div>
+  <div>
+        <figure>
+			<img src="{{objeto_janela.SupDir}}" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" height= "195" width="195">
+		</figure>-->
+  </div>  
+  <div></div>
+  <div>
+    	<figure>
+			<img src="{{objeto_janela.Modelo}}" alt="[com aplicativos para deficientes visuais]" onClick="listagem()" title="o que o usuário lê quando passa o mouse sobre" height= "195" width="195">
+		</figure>
+  </div>  
+  <div></div>
+  <div>
+    	<figure>
+			<img src="{{objeto_janela.InfEsq}}" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" height= "195" width="195">
+		</figure>
+  </div> 
+  <div></div>
+  <div>
+    	<figure>
+			<img src="{{objeto_janela.InfDir}}" alt="[com aplicativos para deficientes visuais]" title="o que o usuário lê quando passa o mouse sobre" height= "195" width="195">
+		</figure>
+  </div>
+   <div>
+	    <!--<button id="listagem" name="rodar_bloco"><img src="{{objeto_janela.InfDir}}"></button>-->
+        <input type="submit" value="Rodar o Bloco" src="{{objeto_janela.Modelo}}" name="Embora">
+        <!--<input type="image" name="Embora" src="{{objeto_janela.Modelo}}" alt="Submit" style="width: 190px;" />-->
+        <!--<input type="submit" value="Embora" src="{{objeto_janela.Modelo}}" name="Embora">-->
+        <!--<input type="image" name="Embora"  src="{{objeto_janela.Modelo}}" alt="Embora" width="48" height="48">-->
+        <!--<input type="image" name="rodar_bloco" src="{{objeto_janela.InfDir}}" alt="Submit" style="width: 50px;" />-->
+   </div>
+
+</div>
+
+  </form>
+</body>
+</html>

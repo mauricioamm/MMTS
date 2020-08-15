@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form method="post">{% csrf_token %}
+	<input type="submit" value="Resetar arquivo de saída" name="ResetSaida"><br><br>
+	{{resultado}}
+</form>
+{% endblock %}
+
+
+
+

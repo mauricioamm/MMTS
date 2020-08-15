@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-columns: 190px 190px 190px; 
+  grid-template-rows: 190px 190px 190px;
+  grid-gap: 10px;
+  justify-content: center;
+  background-color: gray;
+  padding: 10px;
+  margin-right: 0px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 0px 0;
+  font-size: 30px;
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+}
+
+figure{
+  width: auto;
+  height: auto;
+  padding: 0px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+
+body {
+  color:  black;
+  Font: normal 12pt Arial;
+  }
+
+</style>
+</head>
+
+
+<body>
+    Somando valores <br>
+    <input type= "number" name= "txtn1" id= "txtn1"> +
+    <input type= "number" name= "txtn2" id= "txtn2">
+    <input type="button" value="Somar" onclick= "somar()">
+    <div id="res">Resultado </div>
+
+<div class="grid-container">
+
+  <div>
+        <!--<form action="{% url 'url_Entrada_Um' %}" method="post">  {% csrf_token %}-->
+        <form action="{% url 'url_Janelas_SupEsq' %}" method="post">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.SupEsq}}" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form action="{% url 'url_Janelas_SupDir' %}" method="post">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.SupDir}}" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form action="{% url 'url_Janelas_InfEsq' %}" method="post">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.Modelo}}" width="195" height="195" name="Embora">
+        </form>
+  </div>  
+  <div></div>
+  <div>
+        <form method="post">  {% csrf_token %}
+        <!--<form action="{% url 'url_CarregarComparacoes' numero %}" method="post">  {% csrf_token %}-->
+          <input type="image" src="{{objeto_bloco.InfEsq}}" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form action="{% url 'url_Janelas_InfDir' %}" method="post">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.InfDir}}" width="195" height="195" name="Embora">
+        </form>
+  </div>
+</div>
+  <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res= window.document.getElementById('res')
+            var n1= Number(tn1.value)
+            var n2= Number(tn2.value)
+            var s= n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<form method="post">
+	    {% csrf_token %}
+        <h2>Fim do Bloco</h2> {{xbloco}}<br>
+        <p>Atingiu o critério:</p>{{xcriterio}}
+        <p>Próximo bloco é:</p>{{xproximo}}
+        <br>
+        <input type="submit" value="Ir para próximo bloco" name="proximo">
+        <br>
+        <input type="submit" value="Voltar ao início" name="voltar">
+    </form>
+</body>
+</html>

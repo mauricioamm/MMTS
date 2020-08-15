@@ -1,0 +1,98 @@
+<html>
+<head>
+<style type="text/css">
+#conteudo{ display:none; }
+.center{
+ position:absolute;
+ top: 50%;
+ left: 50%;
+ margin-left: -75px; /*centralizando a imagem*/
+ margin-top: -35px; /*centralizando a imagem*/
+}
+
+minhaImagem{
+	width= 150px;
+	height= 150px;
+}
+
+</style>
+</head>
+<body>
+<div id="carregando" class="center">
+   <img src="/static/MtsApp/img/Figura1.jpg" width="250" height="250" />
+   <img src="" id="minhaImagem" width="250" height="250">
+   <!--<img src="/static/MtsApp/img/Figura1.jpg" width="250" height="250" />-->
+</div>
+    <input type="button" value="Btn1JS" onclick= "Btn1JS()">
+    <input type="button" value="Btn2JS" onclick= "Btn2JS()">
+    <input type="button" value="Btn3JS" onclick= "Btn3JS()">
+    <input type="button" value="Chamar" onclick= "Chamar()">
+    <br>
+    <button type="submit" value="ClickE1" onclick="location.href='{% url 'url_ClickE1' %}'" name='ClickE1'>ClickE1 Adventures</button>
+    <button type="submit" value="ClickE2" onclick="location.href='{% url 'url_ClickE2' %}'" name='ClickE2'>ClickE2 Adventures</button>
+    <button type="submit" value="ClickE3" onclick="location.href='{% url 'url_ClickE3' %}'" name='ClickE3'>ClickE3 Adventures</button>
+    <br>
+    <button type="submit" value="ChamaJson" onclick="location.href='{% url 'url_ChamaJson' %}'" name='ChamaJson'>hamaJson Adventures</button>
+
+
+<div id="QualImagem">QualImagem</div>
+<div id="PegueiDoModel"> Peguei isso do Model:</div>
+<div id="Outroconteudo">
+
+<form  method="post">  {% csrf_token %}
+   <div id="BotaoDeFora">
+      <input type="submit" value="BlocoJs" name="BotaoDeFora">
+   </div>
+</form>
+<div>
+   <form method="post">  {% csrf_token %}
+      <input type="image" src="{{objeto_bloco.Modelo}}" width="195" height="195" name="Embora">
+      </form>
+</div>
+
+
+
+<p>Isso aqui é outro conteúdo.</p>
+</div>
+
+
+<script>
+
+  var Fig_a = "/static/MtsApp/img/A3.jpg"
+  var Fig_b = "/static/MtsApp/img/B3.jpg"
+  var Fig_c = "/static/MtsApp/img/C3.jpg"
+   //document.getElementById("minhaImagem").src = [Fib_c]
+
+  window.onload = function(){
+	document.getElementById('Outroconteudo');
+	document.getElementById('Outroconteudo');
+    //QualImagem.innerHTML = `Peguei a figura ${Fib_c}`;
+
+    var DoModel = '{{ objeto_tentativa_js|escapejs }}';
+    PegueiDoModel.innerHTML = 'Peguei isso do Model ${DoModel}';
+  }
+  function Btn1JS() {
+   document.getElementById("minhaImagem").src = [Fig_a]
+        }
+
+  function Btn2JS() {
+   document.getElementById("minhaImagem").src = [Fig_b]
+        }
+
+  function Btn3JS() {
+   document.getElementById("minhaImagem").src = [Fig_c]
+        }
+
+  function chamar(){
+        $.ajax({
+                  url: "url_Js_View",
+                  success: function(objeto_tentativa){
+                        console.log(objeto_tentativa);
+            }
+        });
+  }
+
+</script>
+
+</body>
+</html>

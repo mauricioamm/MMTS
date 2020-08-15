@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-columns: 190px 190px 190px; 
+  grid-template-rows: 190px 190px 190px;
+  grid-gap: 10px;
+  justify-content: center;
+  background-color: gray;
+  padding: 10px;
+  margin-right: 0px;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 0px 0;
+  font-size: 30px;
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+}
+
+figure{
+  width: auto;
+  height: auto;
+  padding: 0px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+
+</style>
+</head>
+
+
+<body>
+
+<div class="grid-container">
+
+  <div>
+        <form method="post" autocomplete="off">  {% csrf_token %} <!--action="{% url 'url_Janelas_SupEsq' %}" -->
+            <img src="{{objeto_bloco.SupEsq}}" width="195" height="195" name="Embora" onclick="location.href='{% url 'url_Janelas_SupEsq' %}'; return false;">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form action="{% url 'url_Janelas_SupDir' %}" method="post" autocomplete="off">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.SupDir}}" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form method="post" autocomplete="off">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.Modelo}}" width="195" height="195" name="Embora">
+        </form>
+  </div>  
+  <div></div>
+  <div>
+        <form action="{% url 'url_Janelas_InfEsq' %}" method="post" autocomplete="off">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.InfEsq}}" width="195" height="195" name="Embora">
+        </form>
+  </div>
+  <div></div>
+  <div>
+        <form action="{% url 'url_Janelas_InfDir' %}" method="post" autocomplete="off">  {% csrf_token %}
+          <input type="image" src="{{objeto_bloco.InfDir}}" width="195" height="195" name="Embora">
+        </form>
+  </div>
+</div>
+
+<script language="JavaScript">
+javascript:window.history.forward(1);
+</script>
+
+</body>
+</html>

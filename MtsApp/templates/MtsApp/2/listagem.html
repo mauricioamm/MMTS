@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<form method="post">
+	    {% csrf_token %}
+        <h2>Listagem</h2>
+        {% for Cond1Bloco01Model in lista %}
+             {{Cond1Bloco01Model.id}}
+             {{Cond1Bloco01Model.Ordem}}
+             {{Cond1Bloco01Model.Tentativa}}
+             {{Cond1Bloco01Model.Correta}}
+             {{Cond1Bloco01Model.Procedimento}}
+             {{Cond1Bloco01Model.NomeBloco}} <br>
+
+        {% endfor %}
+        <br>
+        <br>
+        <input type="submit" value="Rodar o Bloco" name="rodar_bloco">
+    </form>
+</body>
+</html>

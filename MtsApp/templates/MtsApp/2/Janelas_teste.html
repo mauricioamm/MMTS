@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+
+
+<body>
+   <div>
+    <form action="{% url 'url_Janelas_SupDir' %}" method="post">  {% csrf_token %}
+          <input type="image" src="/static/MtsApp/img/Figura1.jpg" width="200" height="200" name="Embora">
+        <br><br>
+   </form>
+   </div>
+   <div>
+   <form action="{% url 'url_listagem' %}" method="post">  {% csrf_token %}
+          <input type="submit" src="/static/MtsApp/img/Figura1.jpg" name="Embora">
+   </form>
+   </div>
+</body>
+</html>

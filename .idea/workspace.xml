@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12842310-41c4-493c-b516-ce0baea2c747" name="Default Changelist" comment="" />
+    <list default="true" id="12842310-41c4-493c-b516-ce0baea2c747" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MtsApp/templates/EprogApp/Entrada_sobre.html" beforeDir="false" afterPath="$PROJECT_DIR$/MtsApp/templates/EprogApp/Entrada_sobre.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mauricioamm.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mauricioamm.sqlite3" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1elfVPbCWaah5NwqqVIos2OxFau" />
   <component name="ProjectViewState">
